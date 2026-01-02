@@ -4,7 +4,7 @@ This project is a Django-based College ERP application that I containerized usin
 
 The goal of this work was not just to run the application, but to understand how a real-world backend system moves from source code to a reproducible, testable, and deployable setup using DevOps practices.
 
-Application Containerization (Docker)
+## Application Containerization (Docker)
 
 The first step was containerizing the Django application to ensure consistency across environments.
 
@@ -22,7 +22,7 @@ Result
 
 The application could now be started with a single Docker command, removing all host-machine dependency issues.
 
-Kubernetes Deployment (Single-Node Cluster)
+## Kubernetes Deployment (Single-Node Cluster)
 
 I deployed the application on a single-node Kubernetes cluster (Minikube) to understand core Kubernetes concepts before moving to managed services.
 
@@ -67,7 +67,7 @@ Admin creation was handled separately (not on every container start).
 
 CI and runtime responsibilities were clearly separated.
 
-Jenkins CI Pipeline
+## Jenkins CI Pipeline
 
 To validate the application automatically, I implemented a Jenkins pipeline.
 
