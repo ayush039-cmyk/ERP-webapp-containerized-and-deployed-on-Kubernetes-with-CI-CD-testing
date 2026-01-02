@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app
+  labels:
+    app: app
+    tag: django
+spec:
+  containers:
+    - name: erp
+      image: dockerayush039/django-erp
+      envFrom:
+        - configMapRef:
+             name: app-config
+        - secretRef:
+             name: app-secret 

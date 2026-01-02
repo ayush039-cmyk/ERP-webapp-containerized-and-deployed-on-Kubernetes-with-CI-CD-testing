@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata: 
+  name: myapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: app
+      tag: django
+  template:
+    metadata:
+      name: app
+      labels:
+        app: app
+        tag: django
+    spec: 
+       containers:
+         - name: django-erp
+           image: dockerayush039/django-erp
+           envFrom:
+             - secretRef:
+                 name: app-secret
+             - configMapRef:
+                 name: app-config

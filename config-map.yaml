@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata: 
+ name: app-config
+data:
+  DJANGO_SUPERUSER_USERNAME: ad1min
+  DJANGO_SUPERUSER_EMAIL: abc@email.com
